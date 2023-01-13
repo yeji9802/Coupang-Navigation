@@ -1,0 +1,316 @@
+/* ---------------------------------------------- */
+/* 헤더                                            */
+/* ---------------------------------------------- */
+.header {
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.header__inner {
+  margin: 0 auto;
+  width: 102rem;
+}
+
+/* 카테고리 버튼 */
+.button--category {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 11rem;
+  height: 11.6rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  border: 0;
+  color: var(--color-white);
+  background-color: var(--color-blue-600);
+}
+
+.button--categoryText {
+  margin-top: 1.2rem;
+}
+
+.button--category:focus {
+  outline: 0 none;
+}
+
+.button--category:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-gray-100);
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------- */
+/* 내비게이션                                        */
+/* ---------------------------------------------- */
+
+.navigation {
+  position: absolute;
+  width: 102rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navigation__inner {
+  position: relative;
+  width: 54rem;
+  box-shadow: 0 4px 4px var(--color-opacity-20);
+}
+
+[class*="navigation__list"] {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  width: 18rem;
+  height: 100%;
+}
+
+.navigation__listDepth2,
+.navigation__listDepth3 {
+  position: absolute;
+  top: 0;
+  left: 18rem;
+}
+
+.navigation__listDepth2::before,
+.navigation__listDepth3::before {
+  content: "";
+  position: absolute;
+  width: 0.1rem;
+  height: calc(100% - 2rem);
+  box-shadow: -1px 0 2px var(--color-opacity-20);
+}
+
+.navigation__button,
+.navigation__link {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 2rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.navigation [class^="icon-"] {
+  font-size: 2rem;
+  margin-right: 0.4rem;
+}
+
+.navigation,
+.navigation__listDepth2,
+.navigation__listDepth3 {
+  display: none;
+}
+
+.is--active.navigation,
+.is--active.navigation__listDepth2,
+.is--active.navigation__listDepth3 {
+  display: block;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--color-blue-600);
+}
+
+.navigation__button.is--active,
+.navigation__button:focus {
+  font-weight: 700;
+  color: var(--color-blue-600);
+  background: url(./../../assets/icon/more-right-active.svg) no-repeat 100% 50%;
+}
+
+.badge--new {
+  margin-left: 0.4rem;
+}
+
+/* ---------------------------------------------- */
+/* 메인 콘텐츠                                       */
+/* ---------------------------------------------- */
+/* 메인 콘텐츠 영역의 최소 높이 설정 */
+.main {
+  min-height: 52rem;
+}
+
+/* ---------------------------------------------- */
+/* 푸터                                            */
+/* ---------------------------------------------- */
+.footer {
+  color: var(--color-gray-800);
+}
+
+/* 안내 링크 목록 */
+.customerGuide {
+  background-color: var(--color-gray-200);
+}
+
+.customerGuide__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+  height: 4rem;
+  list-style: none;
+}
+
+.customerGuide__item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.divider {
+  display: inline-block;
+  width: 0.1rem;
+  height: 1.2rem;
+  border-left: 1px solid var(--color-gray-800);
+}
+
+.customerGuide__link {
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* 쿠팡 고객센터 및 관련 정보 영역 */
+.coupangInformation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 3.2rem auto;
+  width: 120rem;
+}
+
+/* 로고 */
+.logo {
+  width: 17.6rem;
+  height: 4rem;
+}
+
+.logo--mono {
+  background-image: url(./../../assets/logo/logo-mono.svg);
+}
+
+.logo--ir {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: contain;
+}
+
+/* 고객 정보 목록 */
+.coupangInformation__list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.coupangInformation__item {
+  margin-top: 1.2rem;
+  line-height: 1.2;
+}
+.coupangInformation__item:first-child {
+  margin-top: 0;
+}
+
+/* 고객센터 정보 목록 */
+.customerCenter__list {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.customerCenter__item:first-child {
+  font-weight: 700;
+}
+
+.customerCenter__item .divider {
+  display: inline-block;
+  margin: 0 1rem 0 1.4rem;
+}
+
+/* 고객센터 전화번호 */
+.customerCenter__telephone {
+  margin-top: 0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* 고객센터 주소, 이메일*/
+.customerCenter__address,
+.customerCenter__email {
+  margin-top: 0.8rem;
+  line-height: 1.2;
+}
+
+/* 채무지급보증 안내 */
+.paymentGuarantee {
+  width: 28.2rem;
+  line-height: 1.2;
+}
+
+.paymentGuarantee__title {
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+/* 저작권 및 SNS 영역 */
+/* 저작권 */
+.copyrightArea {
+  background-color: var(--color-gray-900);
+}
+
+.copyrightArea__inner {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 1.6rem 0;
+  width: 102rem;
+}
+
+.copyright {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--color-gray-200);
+}
+
+.copyrightText {
+  font: inherit;
+}
+
+/* SNS */
+.sns__list {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  gap: 1rem;
+}
+
+.sns__link {
+  display: block;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+}
+
+.instagram {
+  background: linear-gradient(174.12deg, #285AEB 5.61%, #BC1888 22.32%, #CC2366 36.16%, #DC2743 51.91%, #E6683C 73.38%, #F09433 91.99%);
+}
